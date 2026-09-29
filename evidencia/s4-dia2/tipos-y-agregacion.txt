@@ -1,0 +1,37 @@
+Evidencia tipos y agregación · 2026-09-29 15:50 · carmen chavez
+
+### Tipo de salario y fechaIngreso en cada documento (esperado: decimal y date en todos)
+{"_id":{"salario":"missing","fechaIngreso":"missing"},"documentos":1}
+{"_id":{"salario":"decimal","fechaIngreso":"date"},"documentos":31}
+
+### Un documento de la semilla, completo
+{
+  _id: ObjectId('6abc12a31e5237a24cee5633'),
+  nombre: 'Óscar',
+  apellidos: 'Rosales Ibarra',
+  email: 'oscar.rosales@academia.mx',
+  puesto: 'Ejecutivo de Ventas',
+  departamento: 'Ventas',
+  salario: Decimal128('19500.00'),
+  fechaIngreso: ISODate('2024-01-29T12:00:00.000Z'),
+  activo: false,
+  direccion: {
+    calle: 'Calle Cedro 143',
+    ciudad: 'Guadalajara',
+    estado: 'Jalisco',
+    codigoPostal: '44803'
+  },
+  habilidades: [
+    'Comunicación',
+    'CRM'
+  ]
+}
+
+### La agregación en mongosh: empleados y salario promedio por departamento
+null · 1 empleados · promedio 0.00
+Dirección · 3 empleados · promedio 58666.67
+Finanzas · 6 empleados · promedio 39000.00
+Operaciones · 6 empleados · promedio 32550.00
+Recursos Humanos · 4 empleados · promedio 33125.00
+Tecnología · 6 empleados · promedio 40666.67
+Ventas · 6 empleados · promedio 33416.67
